@@ -1,0 +1,8 @@
+services:
+  webapp:
+    build: .
+    ports:
+      - "5221:5221"
+    environment:
+      - ASPNETCORE_URLS=http://*:5221
+    restart: unless-stopped
